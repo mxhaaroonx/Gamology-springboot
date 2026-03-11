@@ -1,14 +1,17 @@
 package com.ecommerce.Gamology.service;
 
 import com.ecommerce.Gamology.model.Category;
+import com.ecommerce.Gamology.payload.CategoryDTO;
+import com.ecommerce.Gamology.payload.CategoryResponse;
+import com.ecommerce.Gamology.repository.CategoryRepository;
 
 import java.util.List;
 
 
 public interface CategoryService {
-    List<Category> getAllCategories();
-    void createCategory(Category category);
-    String deleteCategory(Long categoryId);
+    CategoryResponse getAllCategories();
+    CategoryDTO createCategory(CategoryDTO categoryDTO);
+    CategoryDTO deleteCategory(Long categoryId);
 
-    Category updateCategory(Category category, Long categoryId);
+    CategoryDTO updateCategory(CategoryDTO categoryDTO, Long categoryId);
 }
